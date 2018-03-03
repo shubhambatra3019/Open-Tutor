@@ -16,11 +16,27 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var classDropDown: UIPickerView!
     @IBOutlet weak var classTextBox: UITextField!
     
-    var list = ["Mathematics", "Computer Science", "ECE"]
+    var list: [String] = []
+    var math: [String] = []
+    
+    var dict: [String: [String]] = [:]
+    var keys = Array<String>()
+    var current: String = "Mathematics"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textBox.isUserInteractionEnabled = false
+        classTextBox.isUserInteractionEnabled = false
+        dropDown.tag = 1
+        classDropDown.tag = 2
+        list = ["Mathematics", "Computer Science", "ECE", "Chem Engineering", "BioChem"]
+        math = ["131", "132", "233", "235", "331"]
+        dict["Mathematics"] = ["131", "132", "233", "235", "331"]
+        dict["Computer Science"] = ["121", "187", "230", "250", "311", "383"]
+        dict["ECE"] = ["101", "130", "189", "267", "356", "440"]
+        dict["Chem Engineering"] = ["118", "190", "260", "310", "430"]
+        dict["BioChem"] = ["220", "280", "360","520", "560"]
+        keys = Array(dict.keys)
         // Do any additional setup after loading the view.
     }
 
@@ -30,26 +46,50 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return list.count
+        if(pickerView.tag == 1) {
+        return keys.count
+        }
+        else {
+            return (dict[current]?.count)!
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        self.view.endEditing(true)
-        return list[row]
+        if(pickerView.tag == 1) {
+            self.view.endEditing(true)
+           // current = keys[row]
+            return keys[row]
+        }
+        else{
+            self.view.endEditing(true)
+            return dict[current]?[row]
+            
+        }
+      
     }
+        
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        self.textBox.text = self.list[row]
-        self.dropDown.isHidden = false
+        if(pickerView.tag == 1){
+            self.textBox.text = self.keys[row]
+            current = self.keys[row]
+            classDropDown.reloadAllComponents()
+            self.classTextBox.text = "Select A Class"
+        }
+        else {
+            self.classTextBox.text = self.dict[current]?[row]
+        }
+            self.dropDown.isHidden = false
         
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+  /*  func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if textField == self.textBox {
           //  self.dropDown.isHidden = false
@@ -57,8 +97,11 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
             
             textField.endEditing(false)
         }
+        if textField == self.classTextBox {
+            textField.endEditing(false)
+        }
         
-    }
+    }*/
     
     /*
     // MARK: - Navigation
