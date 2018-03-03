@@ -16,6 +16,8 @@
 		7FDFB183204B2DB7007D9E91 /* Tutoring_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB182204B2DB7007D9E91 /* Tutoring_AppTests.swift */; };
 		7FDFB18E204B2DB8007D9E91 /* Tutoring_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB18D204B2DB8007D9E91 /* Tutoring_AppUITests.swift */; };
 		7FDFB19C204B3176007D9E91 /* ClassPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */; };
+		7FDFB19E204B5677007D9E91 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */; };
+		7FDFB1A0204B5CEF007D9E91 /* TutorCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7FDFB18D204B2DB8007D9E91 /* Tutoring_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutoring_AppUITests.swift; sourceTree = "<group>"; };
 		7FDFB18F204B2DB8007D9E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPickerViewController.swift; sourceTree = "<group>"; };
+		7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorTableViewController.swift; sourceTree = "<group>"; };
+		7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */,
 				7FDFB16C204B2DB7007D9E91 /* ViewController.swift */,
 				7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */,
+				7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */,
+				7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */,
 				7FDFB16E204B2DB7007D9E91 /* Main.storyboard */,
 				7FDFB174204B2DB7007D9E91 /* Assets.xcassets */,
 				7FDFB176204B2DB7007D9E91 /* LaunchScreen.storyboard */,
@@ -265,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDFB1A0204B5CEF007D9E91 /* TutorCellTableViewCell.swift in Sources */,
+				7FDFB19E204B5677007D9E91 /* TutorTableViewController.swift in Sources */,
 				7FDFB173204B2DB7007D9E91 /* Tutoring_App.xcdatamodeld in Sources */,
 				7FDFB19C204B3176007D9E91 /* ClassPickerViewController.swift in Sources */,
 				7FDFB16D204B2DB7007D9E91 /* ViewController.swift in Sources */,

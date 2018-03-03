@@ -55,6 +55,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMo-oX-lDA">
+                                <rect key="frame" x="0.0" y="154" width="375" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="9DR-RN-kR5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="6lS-sh-WZz" id="pdu-nI-ivZ"/>
+                                    <outlet property="delegate" destination="6lS-sh-WZz" id="KQi-el-cIf"/>
+                                </connections>
+                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select A Major" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zrw-Ub-Iqi">
                                 <rect key="frame" x="0.0" y="94" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,16 +95,19 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMo-oX-lDA">
-                                <rect key="frame" x="0.0" y="154" width="375" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="9DR-RN-kR5"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGo-Lq-FEf">
+                                <rect key="frame" x="81" y="554" width="213" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <outlet property="dataSource" destination="6lS-sh-WZz" id="pdu-nI-ivZ"/>
-                                    <outlet property="delegate" destination="6lS-sh-WZz" id="KQi-el-cIf"/>
+                                    <action selector="FindTutorButton:" destination="6lS-sh-WZz" eventType="touchUpInside" id="7Bu-ad-qLK"/>
+                                    <segue destination="sFi-9G-sOi" kind="show" id="xYY-Tc-8tA"/>
                                 </connections>
-                            </pickerView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9880952381" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -124,6 +137,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu3-ns-P8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1292" y="652.62368815592208"/>
+        </scene>
+        <!--Tutor Table View Controller-->
+        <scene sceneID="WhC-TF-Hbj">
+            <objects>
+                <viewController id="sFi-9G-sOi" customClass="TutorTableViewController" customModule="Tutoring_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OTa-iL-l3z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5i0-jh-3d1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tutorCell" rowHeight="64" id="hb3-8R-ULL" customClass="TutorInfoTableViewCell" customModule="Tutoring_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hb3-8R-ULL" id="fdG-00-GWP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXu-UK-KcF">
+                                                    <rect key="frame" x="83" y="0.0" width="207" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="usernameLabel" destination="cXu-UK-KcF" id="gtR-FY-nYZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sFi-9G-sOi" id="Z4C-YP-BqP"/>
+                                    <outlet property="delegate" destination="sFi-9G-sOi" id="Rh9-Kg-s2w"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5i0-jh-3d1" firstAttribute="leading" secondItem="2Vu-aj-YIp" secondAttribute="leading" id="jkb-Xl-EzC"/>
+                            <constraint firstItem="5i0-jh-3d1" firstAttribute="trailing" secondItem="2Vu-aj-YIp" secondAttribute="trailing" id="kpN-hm-XQM"/>
+                            <constraint firstItem="5i0-jh-3d1" firstAttribute="bottom" secondItem="2Vu-aj-YIp" secondAttribute="bottom" id="tWk-od-YiV"/>
+                            <constraint firstItem="5i0-jh-3d1" firstAttribute="top" secondItem="2Vu-aj-YIp" secondAttribute="top" id="zj8-WF-i2V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Vu-aj-YIp"/>
+                    </view>
+                    <connections>
+                        <outlet property="tutorTable" destination="5i0-jh-3d1" id="k5c-wy-R5u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0f-u7-Asm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2106.4000000000001" y="649.92503748125944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPh-Yl-Cs3">

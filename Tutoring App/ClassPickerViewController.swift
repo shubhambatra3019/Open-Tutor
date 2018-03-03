@@ -89,19 +89,8 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
     }
     
-  /*  func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        if textField == self.textBox {
-          //  self.dropDown.isHidden = false
-            //if you dont want the users to se the keyboard type:
-            
-            textField.endEditing(false)
-        }
-        if textField == self.classTextBox {
-            textField.endEditing(false)
-        }
-        
-    }*/
+    @IBAction func FindTutorButton(_ sender: Any) {
+    }
     
     /*
     // MARK: - Navigation
