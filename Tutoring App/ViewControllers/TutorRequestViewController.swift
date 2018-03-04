@@ -43,6 +43,21 @@ class TutorRequestViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: index) as! TutorRequestTableViewCell
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "studentProfile") as! StudentInfoViewController
+        
+        myVC.name = currentCell.studentName.text
+        //img = currentCell.tutorImage.image!
+        //myVC = currentCell.tutorRating.text!
+        myVC.image = currentCell.studentImage.image!
+        myVC.classRequested = currentCell.studentClass.text
+        navigationController?.pushViewController(myVC, animated: true)
+        //performSegue(withIdentifier: "profileView", sender: nil)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70.0
     }
