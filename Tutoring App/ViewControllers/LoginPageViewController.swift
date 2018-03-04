@@ -12,12 +12,15 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var signInOutlet: UIButton!
+    
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         passwordTextField.isSecureTextEntry = true
+        signInOutlet.layer.cornerRadius = 36
         // Do any additional setup after loading the view.
     }
 
