@@ -12,7 +12,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
    
     @IBOutlet weak var tutorTable: UITableView!
     
-    var arr = ["1", "2", "3", "4", "5"]
+    var tutors = [Tutor]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,42 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arr.count
+        return tutors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "tutorCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TutorInfoTableViewCell else {
+            fatalError("The cell is not n instance of MealTableViewCell.")
+            
+        }
+        let tutor = tutors[indexPath.row]
+        
+        cell.usernameLabel.text = tutor.name
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
+    }
+    
+   
+    private func loadTutors() {
+        
+        let tutor1 = Tutor(name: "Shubham Batra", photo: #imageLiteral(resourceName: "tutorImage.jpg"), major: "Mathemtics", rating: 3.4)
+        let tutor2 = Tutor(name: "Rohan Nandakumar", photo: #imageLiteral(resourceName: "tutorImage.jpg"), major: "ECE", rating: 3.5)
+        let tutor3 = Tutor(name: "Sharath Ramkumar", photo: #imageLiteral(resourceName: "tutorImage.jpg"), major: "BioChem", rating: 3.7)
+        let tutor4 = Tutor(name: "Sushant Rao", photo: #imageLiteral(resourceName: "tutorImage.jpg"), major: "Chem Engineering", rating: 3.5)
+        let tutor5 = Tutor(name: "Random person", photo: #imageLiteral(resourceName: "tutorImage.jpg"), major: "Random Major", rating: 3.4)
+        
+        tutors.append(tutor1!)
+        tutors.append(tutor2!)
+        tutors.append(tutor3!)
+        tutors.append(tutor4!)
+        tutors.append(tutor5!)
+        
+        
         
     }
     /*
