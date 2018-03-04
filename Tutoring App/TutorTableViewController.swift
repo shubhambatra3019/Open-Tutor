@@ -70,7 +70,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         //myVC = currentCell.tutorRating.text!
         myVC.image = currentCell.tutorImage.image!
         myVC.rating = currentCell.tutorRating.text
-        
+        myVC.major = currentCell.tutorMajor.text
         navigationController?.pushViewController(myVC, animated: true)
         //performSegue(withIdentifier: "profileView", sender: nil)
     }

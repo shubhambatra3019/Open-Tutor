@@ -24,6 +24,7 @@ class TutorProfileViewController: UIViewController {
     var name: String!
     var rating: String!
     var image = UIImage()
+    var major: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class TutorProfileViewController: UIViewController {
         tutorNameLabel.text = name
         tutorProfileImage.image = image
         ratingLabel.text = rating
+        desc.text = "I am studying " + major + " at University of Massachusetts, Amherst. I have a passion for tutoring and would love to help you out."
         // Do any additional setup after loading the view.
     }
 
