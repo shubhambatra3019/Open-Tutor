@@ -50,7 +50,13 @@ class TutorProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func acceptTutor(_ sender: Any) {
+    
+        acceptButtonLayout.layer.backgroundColor = UIColor.green.cgColor
+        acceptButtonLayout.setTitle("Request Sent", for: .normal)
+    
+    }
+    
     /*
     // MARK: - Navigation
 

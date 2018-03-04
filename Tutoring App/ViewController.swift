@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tutorButton: UIButton!
+    @IBOutlet weak var findATutorButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tutorButton.layer.cornerRadius = 30
+        findATutorButton.layer.cornerRadius = 30
         // Do any additional setup after loading the view, typically from a nib.
     }
 

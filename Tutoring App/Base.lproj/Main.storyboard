@@ -18,22 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFo-OQ-MmH">
-                                <rect key="frame" x="58" y="165" width="258" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e6-Xd-dRs">
+                                <rect key="frame" x="38" y="343" width="300" height="72"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Tutor">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="tutorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPY-yN-MTk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e6-Xd-dRs">
-                                <rect key="frame" x="58" y="299" width="258" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="CWc-4M-faC"/>
+                                    <constraint firstAttribute="height" constant="72" id="g9D-He-VKs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Find a Tutor">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,11 +34,37 @@
                                     <segue destination="6lS-sh-WZz" kind="show" identifier="findTutor" id="IQw-hX-Xxm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFo-OQ-MmH">
+                                <rect key="frame" x="38" y="182" width="300" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="eYd-D9-nmd"/>
+                                    <constraint firstAttribute="height" constant="72" id="i7Z-Xs-0Fa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Tutor">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tutorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPY-yN-MTk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yFo-OQ-MmH" firstAttribute="centerX" secondItem="8e6-Xd-dRs" secondAttribute="centerX" id="3FQ-Bh-prh"/>
+                            <constraint firstItem="yFo-OQ-MmH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8h-RO-2Wh"/>
+                            <constraint firstItem="8e6-Xd-dRs" firstAttribute="top" secondItem="yFo-OQ-MmH" secondAttribute="bottom" constant="89" id="KU8-I3-qd7"/>
+                            <constraint firstItem="yFo-OQ-MmH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="fcD-6h-yA6"/>
+                            <constraint firstItem="8e6-Xd-dRs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ucx-rV-kgB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tutoring" id="JAy-Ih-SBT"/>
+                    <connections>
+                        <outlet property="findATutorButton" destination="8e6-Xd-dRs" id="hrI-tb-Ty2"/>
+                        <outlet property="tutorButton" destination="yFo-OQ-MmH" id="OwM-wp-5wz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,10 +118,13 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGo-Lq-FEf">
-                                <rect key="frame" x="81" y="554" width="213" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGo-Lq-FEf">
+                                <rect key="frame" x="63" y="554" width="250" height="72"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="h6r-aK-Xfp"/>
+                                    <constraint firstAttribute="height" constant="72" id="vNG-Co-iON"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,6 +138,7 @@
                         <color key="backgroundColor" red="0.9880952381" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="O67-6f-bMb" firstAttribute="trailing" secondItem="Zrw-Ub-Iqi" secondAttribute="trailing" id="5QH-Ie-wrU"/>
+                            <constraint firstItem="TGo-Lq-FEf" firstAttribute="centerX" secondItem="fsg-D6-fvS" secondAttribute="centerX" id="6Fs-tz-SjS"/>
                             <constraint firstItem="qNU-4l-Orj" firstAttribute="leading" secondItem="O67-6f-bMb" secondAttribute="leading" id="7gy-Gp-bkm"/>
                             <constraint firstItem="Zrw-Ub-Iqi" firstAttribute="top" secondItem="O67-6f-bMb" secondAttribute="top" constant="30" id="BQr-eR-MkT"/>
                             <constraint firstItem="O67-6f-bMb" firstAttribute="trailing" secondItem="nMo-oX-lDA" secondAttribute="trailing" id="Gpa-lo-QRF"/>
@@ -125,6 +146,7 @@
                             <constraint firstItem="O67-6f-bMb" firstAttribute="trailing" secondItem="qNU-4l-Orj" secondAttribute="trailing" id="L9H-Xc-OBL"/>
                             <constraint firstItem="nMo-oX-lDA" firstAttribute="top" secondItem="Zrw-Ub-Iqi" secondAttribute="bottom" constant="10" id="MJv-Ax-L8l"/>
                             <constraint firstItem="Zrw-Ub-Iqi" firstAttribute="leading" secondItem="O67-6f-bMb" secondAttribute="leading" id="SFb-bV-iv6"/>
+                            <constraint firstItem="TGo-Lq-FEf" firstAttribute="top" secondItem="qNU-4l-Orj" secondAttribute="bottom" constant="30" id="TUk-Kn-Nqm"/>
                             <constraint firstItem="qNU-4l-Orj" firstAttribute="top" secondItem="Zrw-Ub-Iqi" secondAttribute="bottom" constant="220" id="bFb-PM-xuY"/>
                             <constraint firstItem="HaC-sB-h14" firstAttribute="top" secondItem="Zrw-Ub-Iqi" secondAttribute="bottom" constant="180" id="n2Q-7x-cBl"/>
                             <constraint firstItem="nMo-oX-lDA" firstAttribute="leading" secondItem="O67-6f-bMb" secondAttribute="leading" id="tQH-pF-tOh"/>
@@ -293,11 +315,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <state key="normal" title="Accept Tutor">
+                                <state key="normal" title="Request Tutor">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="AcceptTutorButton:" destination="bxk-9K-ihm" eventType="touchUpInside" id="jse-aU-foi"/>
+                                    <action selector="acceptTutor:" destination="bxk-9K-ihm" eventType="touchUpInside" id="D6Z-JL-xsK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyR-Jg-n9O">
