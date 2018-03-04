@@ -27,7 +27,8 @@ class StudentInfoViewController: UIViewController {
         studentImage.image = image
         studentName.text = name
         classRequestedLabel.text = classRequested
-        messageLabel.text = "Hi Shubham! I am looking for a tutor to help me with my MATH 331 class and saw that you have great experience in tutoring. Could you please help me out too?"
+        messageLabel.text = "Hi Shubham! I am looking for a tutor to help me with my " + classRequested +
+        " class and saw that you have great experience in tutoring. Could you please help me out too?"
         
         
         // Do any additional setup after loading the view.

@@ -83,12 +83,12 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
    
     private func loadTutors() {
         
-        let tutor1 = Tutor(name: "Shubham Batra", photo: #imageLiteral(resourceName: "image.png"), major: "Computer Science", rating: 3.4)
-        let tutor2 = Tutor(name: "Rohan Nandakumar", photo: #imageLiteral(resourceName: "image.png"), major: "ECE", rating: 3.5)
-        let tutor3 = Tutor(name: "Sharath Ramkumar", photo: #imageLiteral(resourceName: "image.png"), major: "Computer Science", rating: 3.7)
-        let tutor4 = Tutor(name: "Sushant Rao", photo: #imageLiteral(resourceName: "image.png"), major: "Chem Engineering", rating: 3.5)
-        let tutor5 = Tutor(name: "Catherine Walsh", photo: #imageLiteral(resourceName: "image.png"), major: "Public Health", rating: 3.4)
-         let tutor6 = Tutor(name: "Harriet Smith", photo: #imageLiteral(resourceName: "image.png"), major: "Chem Engineering", rating: 3.8)
+        let tutor1 = Tutor(name: "Shubham Batra", photo: #imageLiteral(resourceName: "image.png"), major: major, rating: 3.4)
+        let tutor2 = Tutor(name: "Rohan Nandakumar", photo: #imageLiteral(resourceName: "image.png"), major: major, rating: 3.5)
+        let tutor3 = Tutor(name: "Sharath Ramkumar", photo: #imageLiteral(resourceName: "image.png"), major: major, rating: 3.7)
+        let tutor4 = Tutor(name: "Sushant Rao", photo: #imageLiteral(resourceName: "image.png"), major: major, rating: 3.5)
+        let tutor5 = Tutor(name: "Catherine Walsh", photo: #imageLiteral(resourceName: "image.png"), major: major, rating: 3.4)
+         let tutor6 = Tutor(name: "Harriet Smith", photo: #imageLiteral(resourceName: "image.png"), major: major, rating: 3.8)
         
         tutors.append(tutor1!)
         tutors.append(tutor2!)

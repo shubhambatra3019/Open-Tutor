@@ -15,7 +15,7 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
      @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var classDropDown: UIPickerView!
     @IBOutlet weak var classTextBox: UITextField!
-    
+    var currentMajor: String!
     var list: [String] = []
     var math: [String] = []
     
@@ -80,6 +80,7 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if(pickerView.tag == 1){
             self.textBox.text = self.keys[row]
             current = self.keys[row]
+            currentMajor = self.keys[row]
             classDropDown.reloadAllComponents()
             self.classTextBox.text = "Select A Class"
         }
@@ -93,14 +94,16 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBAction func FindTutorButton(_ sender: Any) {
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let myVC = segue.destination as! TutorTableViewController
+        myVC.major = currentMajor
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
