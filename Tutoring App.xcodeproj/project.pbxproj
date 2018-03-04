@@ -123,25 +123,10 @@
 		7FDFB169204B2DB7007D9E91 /* Tutoring App */ = {
 			isa = PBXGroup;
 			children = (
-				7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */,
 				7FDFB1B5204BC56E007D9E91 /* ViewControllers */,
-				7FDFB16C204B2DB7007D9E91 /* ViewController.swift */,
-				7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */,
-				7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */,
-				7FDFB1A7204B9272007D9E91 /* TutorProfileViewController.swift */,
-				7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */,
-				7FDFB1B1204BBEE2007D9E91 /* TutorRequestViewController.swift */,
-				7FDFB1B3204BC032007D9E91 /* TutorRequestTableViewCell.swift */,
-				7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */,
-				7FDFB1AF204BACD0007D9E91 /* image.png */,
-				7FDFB1AD204BA79A007D9E91 /* tutor2.png */,
-				7FDFB1AB204BA668007D9E91 /* star1.png */,
-				7FDFB1A9204B9EF2007D9E91 /* Star.png */,
-				7FDFB1A1204B6325007D9E91 /* Tutor.swift */,
-				7FDFB16E204B2DB7007D9E91 /* Main.storyboard */,
+				7FDFB1B6204BC5C4007D9E91 /* SupportingFiles */,
+				7FDFB1B8204BC607007D9E91 /* Images */,
 				7FDFB174204B2DB7007D9E91 /* Assets.xcassets */,
-				7FDFB176204B2DB7007D9E91 /* LaunchScreen.storyboard */,
-				7FDFB179204B2DB7007D9E91 /* Info.plist */,
 				7FDFB171204B2DB7007D9E91 /* Tutoring_App.xcdatamodeld */,
 			);
 			path = "Tutoring App";
@@ -168,8 +153,39 @@
 		7FDFB1B5204BC56E007D9E91 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */,
+				7FDFB16C204B2DB7007D9E91 /* ViewController.swift */,
+				7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */,
+				7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */,
+				7FDFB1A7204B9272007D9E91 /* TutorProfileViewController.swift */,
+				7FDFB1B1204BBEE2007D9E91 /* TutorRequestViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7FDFB1B6204BC5C4007D9E91 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */,
+				7FDFB1B3204BC032007D9E91 /* TutorRequestTableViewCell.swift */,
+				7FDFB1A1204B6325007D9E91 /* Tutor.swift */,
+				7FDFB16E204B2DB7007D9E91 /* Main.storyboard */,
+				7FDFB176204B2DB7007D9E91 /* LaunchScreen.storyboard */,
+				7FDFB179204B2DB7007D9E91 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7FDFB1B8204BC607007D9E91 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */,
+				7FDFB1AF204BACD0007D9E91 /* image.png */,
+				7FDFB1AD204BA79A007D9E91 /* tutor2.png */,
+				7FDFB1AB204BA668007D9E91 /* star1.png */,
+				7FDFB1A9204B9EF2007D9E91 /* Star.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
