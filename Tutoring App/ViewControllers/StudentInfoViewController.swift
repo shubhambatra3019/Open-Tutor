@@ -23,7 +23,10 @@ class StudentInfoViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        acceptOutlet.layer.cornerRadius = 10
+        rejectOutlet.layer.cornerRadius = 10
+        
         studentImage.image = image
         studentName.text = name
         classRequestedLabel.text = classRequested
@@ -42,12 +45,16 @@ class StudentInfoViewController: UIViewController {
     @IBAction func acceptButton(_ sender: Any) {
         acceptOutlet.layer.backgroundColor = UIColor.green.cgColor
         acceptOutlet.setTitle("Accepted", for: .normal)
+        rejectOutlet.isHidden = true
+        acceptOutlet.frame.origin.x = acceptOutlet.frame.origin.x + 100
     }
     
    
     @IBAction func rejectButton(_ sender: Any) {
         rejectOutlet.layer.backgroundColor = UIColor.red.cgColor
-        rejectOutlet.setTitle("Rejected", for: .normal)
+        rejectOutlet.setTitle("Declined", for: .normal)
+        acceptOutlet.isHidden = true
+        rejectOutlet.frame.origin.x =  rejectOutlet.frame.origin.x - 100
         
     }
     /*

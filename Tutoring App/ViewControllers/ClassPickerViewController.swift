@@ -82,7 +82,7 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
             current = self.keys[row]
             currentMajor = self.keys[row]
             classDropDown.reloadAllComponents()
-            self.classTextBox.text = "Select A Class"
+           // self.classTextBox.text = "Select A Class"
         }
         else {
             self.classTextBox.text = self.dict[current]?[row]

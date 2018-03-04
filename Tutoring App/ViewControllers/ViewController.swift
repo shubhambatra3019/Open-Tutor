@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tutorButton.layer.cornerRadius = 30
-        findATutorButton.layer.cornerRadius = 30
+        tutorButton.layer.cornerRadius = 40
+        findATutorButton.layer.cornerRadius = 40
         // Do any additional setup after loading the view, typically from a nib.
     }
 
