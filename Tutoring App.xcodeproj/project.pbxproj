@@ -21,6 +21,7 @@
 		7FDFB1A2204B6325007D9E91 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A1204B6325007D9E91 /* Tutor.swift */; };
 		7FDFB1A4204B7DB2007D9E91 /* tutorImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */; };
 		7FDFB1A6204B8CC2007D9E91 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A5204B8CC1007D9E91 /* image.png */; };
+		7FDFB1A8204B9272007D9E91 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A7204B9272007D9E91 /* TutorProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7FDFB1A1204B6325007D9E91 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
 		7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorImage.jpg; sourceTree = "<group>"; };
 		7FDFB1A5204B8CC1007D9E91 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		7FDFB1A7204B9272007D9E91 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				7FDFB16C204B2DB7007D9E91 /* ViewController.swift */,
 				7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */,
 				7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */,
+				7FDFB1A7204B9272007D9E91 /* TutorProfileViewController.swift */,
 				7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */,
 				7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */,
 				7FDFB1A5204B8CC1007D9E91 /* image.png */,
@@ -284,6 +287,7 @@
 			files = (
 				7FDFB1A0204B5CEF007D9E91 /* TutorCellTableViewCell.swift in Sources */,
 				7FDFB1A2204B6325007D9E91 /* Tutor.swift in Sources */,
+				7FDFB1A8204B9272007D9E91 /* TutorProfileViewController.swift in Sources */,
 				7FDFB19E204B5677007D9E91 /* TutorTableViewController.swift in Sources */,
 				7FDFB173204B2DB7007D9E91 /* Tutoring_App.xcdatamodeld in Sources */,
 				7FDFB19C204B3176007D9E91 /* ClassPickerViewController.swift in Sources */,

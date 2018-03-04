@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="2106.4000000000001" y="649.92503748125944"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutor Profile View Controller-->
         <scene sceneID="TdU-Kg-fVs">
             <objects>
-                <viewController id="bxk-9K-ihm" sceneMemberID="viewController">
+                <viewController id="bxk-9K-ihm" customClass="TutorProfileViewController" customModule="Tutoring_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO9-Pe-gi4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +270,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU3-fR-nyX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU3-fR-nyX">
                                 <rect key="frame" x="301" y="285" width="42" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -286,6 +286,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Lm-9m-rRu"/>
                     </view>
+                    <connections>
+                        <outlet property="desc" destination="arx-2I-f5l" id="aZe-sb-XLm"/>
+                        <outlet property="ratingLabel" destination="esu-vE-bv4" id="I3f-YW-9q0"/>
+                        <outlet property="reviewsLabel" destination="mU3-fR-nyX" id="9z8-cH-97X"/>
+                        <outlet property="totalLabel" destination="g7I-SN-zgk" id="PMk-yn-qZ7"/>
+                        <outlet property="tutorProfileImage" destination="Yo4-jQ-c0m" id="sIl-bQ-Nqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e54-yv-dRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
