@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2A2431204C56AE00F39EB2 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A2430204C56AE00F39EB2 /* LoginPageViewController.swift */; };
 		7FDFB16B204B2DB7007D9E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */; };
 		7FDFB16D204B2DB7007D9E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB16C204B2DB7007D9E91 /* ViewController.swift */; };
 		7FDFB170204B2DB7007D9E91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDFB16E204B2DB7007D9E91 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F2A2430204C56AE00F39EB2 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		7FDFB167204B2DB7007D9E91 /* Tutoring App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tutoring App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FDFB16C204B2DB7007D9E91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		7FDFB1B5204BC56E007D9E91 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F2A2430204C56AE00F39EB2 /* LoginPageViewController.swift */,
 				7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */,
 				7FDFB16C204B2DB7007D9E91 /* ViewController.swift */,
 				7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */,
@@ -339,6 +342,7 @@
 				7FDFB1B4204BC032007D9E91 /* TutorRequestTableViewCell.swift in Sources */,
 				7FDFB19C204B3176007D9E91 /* ClassPickerViewController.swift in Sources */,
 				7FDFB16D204B2DB7007D9E91 /* ViewController.swift in Sources */,
+				7F2A2431204C56AE00F39EB2 /* LoginPageViewController.swift in Sources */,
 				7FDFB1BA204BC781007D9E91 /* StudentInfoViewController.swift in Sources */,
 				7FDFB16B204B2DB7007D9E91 /* AppDelegate.swift in Sources */,
 			);
