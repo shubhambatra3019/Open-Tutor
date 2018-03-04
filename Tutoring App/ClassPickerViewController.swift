@@ -31,7 +31,7 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
         dropDown.tag = 1
         classDropDown.tag = 2
         list = ["Mathematics", "Computer Science", "ECE", "Chem Engineering", "BioChem"]
-        math = ["131", "132", "233", "235", "331"]
+     //   math = ["131", "132", "233", "235", "331"]
         dict["Mathematics"] = ["131", "132", "233", "235", "331"]
         dict["Computer Science"] = ["121", "187", "230", "250", "311", "383"]
         dict["ECE"] = ["101", "130", "189", "267", "356", "440"]

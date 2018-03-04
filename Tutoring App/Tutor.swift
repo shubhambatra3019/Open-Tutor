@@ -25,5 +25,12 @@ class Tutor {
         
     }
     
+    init?(name: String, photo: UIImage?, major: String) {
+        self.name = name
+        self.photo = photo
+        self.major = major
+        self.rating = 0.0
+    }
+    
 
 }
