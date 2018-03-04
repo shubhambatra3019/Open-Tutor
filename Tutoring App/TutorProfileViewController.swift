@@ -13,16 +13,22 @@ class TutorProfileViewController: UIViewController {
     
     @IBOutlet weak var tutorProfileImage: UIImageView!
     
-   
+    @IBOutlet weak var tutorNameLabel: UILabel!
+    
     @IBOutlet weak var desc: UILabel!
     
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var reviewsLabel: UILabel!
     
+    var name: String!
+    var rating: String!
+    var image: UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tutorNameLabel.text = name
         // Do any additional setup after loading the view.
     }
 

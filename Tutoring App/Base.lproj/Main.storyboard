@@ -189,7 +189,6 @@
                                             <outlet property="tutorMajor" destination="b6O-ro-dlr" id="ofL-4Y-oRU"/>
                                             <outlet property="tutorRating" destination="3up-Qp-mSs" id="Ats-vp-UUI"/>
                                             <outlet property="usernameLabel" destination="cXu-UK-KcF" id="gtR-FY-nYZ"/>
-                                            <segue destination="bxk-9K-ihm" kind="show" id="Icq-K0-KVY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -219,17 +218,17 @@
         <!--Tutor Profile View Controller-->
         <scene sceneID="TdU-Kg-fVs">
             <objects>
-                <viewController id="bxk-9K-ihm" customClass="TutorProfileViewController" customModule="Tutoring_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileViewController" id="bxk-9K-ihm" customClass="TutorProfileViewController" customModule="Tutoring_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sO9-Pe-gi4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yo4-jQ-c0m">
-                                <rect key="frame" x="137" y="93" width="100" height="100"/>
+                                <rect key="frame" x="137" y="77" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arx-2I-f5l">
-                                <rect key="frame" x="16" y="216" width="343" height="61"/>
+                                <rect key="frame" x="17" y="216" width="343" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -282,6 +281,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyR-Jg-n9O">
+                                <rect key="frame" x="103" y="165" width="170" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Lm-9m-rRu"/>
@@ -291,6 +297,7 @@
                         <outlet property="ratingLabel" destination="esu-vE-bv4" id="I3f-YW-9q0"/>
                         <outlet property="reviewsLabel" destination="mU3-fR-nyX" id="9z8-cH-97X"/>
                         <outlet property="totalLabel" destination="g7I-SN-zgk" id="PMk-yn-qZ7"/>
+                        <outlet property="tutorNameLabel" destination="TyR-Jg-n9O" id="cXb-tD-F1G"/>
                         <outlet property="tutorProfileImage" destination="Yo4-jQ-c0m" id="sIl-bQ-Nqe"/>
                     </connections>
                 </viewController>

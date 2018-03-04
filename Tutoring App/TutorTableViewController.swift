@@ -13,6 +13,11 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tutorTable: UITableView!
     
     var tutors = [Tutor]()
+    var nam: String = "Hi"
+    var img = UIImage()
+    var rat: String = ""
+    var major: String = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +59,22 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: index) as! TutorInfoTableViewCell
+       
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "profileViewController") as! TutorProfileViewController
+        
+        myVC.name = currentCell.usernameLabel.text!
+        //img = currentCell.tutorImage.image!
+        //myVC = currentCell.tutorRating.text!
+        my
+        major = currentCell.tutorMajor.text!
+        
+        navigationController?.pushViewController(myVC, animated: true)
+        //performSegue(withIdentifier: "profileView", sender: nil)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
@@ -80,11 +101,16 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      //    Get the new view controller using segue.destinationViewController.
        //  Pass the selected object to the new view controller.
-        
-    }
+        if(segue.identifier == "profileView") {
+        let profileVC = segue.destination as! TutorProfileViewController
+        //profileVC.tutorProfileImage.image = img
+            profileVC.name = nam
+            profileVC.ratingLabel.text = rat
+        }
 
 
+}*/
 }
