@@ -17,6 +17,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        passwordTextField.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +25,15 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func signInButton(_ sender: Any) {
+    
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "MainPage") as! ViewController!
+        navigationController?.pushViewController(myVC!, animated: true)
+    
+    
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
