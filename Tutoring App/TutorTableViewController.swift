@@ -18,7 +18,8 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var rat: String = ""
     var major: String = ""
     
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,7 +52,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         // cell.imageView?.layer.cornerRadius = 30
         cell.usernameLabel.text = tutor.name
         cell.tutorImage.image = UIImage(named: "image.png")
-       
+        cell.tutorRating.layer.zPosition = 1
         cell.tutorMajor.text = tutor.major
         cell.tutorRating.text = String(tutor.rating)
         
@@ -76,7 +77,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
+        return 70.0
     }
     
    

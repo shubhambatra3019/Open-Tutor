@@ -12,7 +12,7 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
-
+     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var classDropDown: UIPickerView!
     @IBOutlet weak var classTextBox: UITextField!
     
@@ -25,6 +25,7 @@ class ClassPickerViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchButton.layer.cornerRadius = 20
         textBox.isUserInteractionEnabled = false
         classTextBox.isUserInteractionEnabled = false
         dropDown.tag = 1

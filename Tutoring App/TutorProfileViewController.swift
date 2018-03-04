@@ -26,12 +26,21 @@ class TutorProfileViewController: UIViewController {
     var image = UIImage()
     var major: String!
     
+    @IBOutlet weak var acceptButtonLayout: UIButton!
+    
+    @IBAction func AcceptTutorButton(_ sender: Any) {
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tutorNameLabel.text = name
         tutorProfileImage.image = image
         ratingLabel.text = rating
+        ratingLabel.layer.zPosition = 1
+        acceptButtonLayout.layer.cornerRadius = 20
         desc.text = "I am studying " + major + " at University of Massachusetts, Amherst. I have a passion for tutoring and would love to help you out."
         // Do any additional setup after loading the view.
     }
