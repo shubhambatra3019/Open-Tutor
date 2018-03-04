@@ -23,12 +23,14 @@ class TutorProfileViewController: UIViewController {
     
     var name: String!
     var rating: String!
-    var image: UIImage()
+    var image = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tutorNameLabel.text = name
+        tutorProfileImage.image = image
+        ratingLabel.text = rating
         // Do any additional setup after loading the view.
     }
 

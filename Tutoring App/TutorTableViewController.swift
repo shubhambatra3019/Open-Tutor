@@ -50,7 +50,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         //cell.imageView?.layer.borderColor = UIColor.black.cgColor
         // cell.imageView?.layer.cornerRadius = 30
         cell.usernameLabel.text = tutor.name
-        cell.imageView?.image = image
+        cell.tutorImage.image = UIImage(named: "image.png")
        
         cell.tutorMajor.text = tutor.major
         cell.tutorRating.text = String(tutor.rating)
@@ -68,8 +68,8 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         myVC.name = currentCell.usernameLabel.text!
         //img = currentCell.tutorImage.image!
         //myVC = currentCell.tutorRating.text!
-        my
-        major = currentCell.tutorMajor.text!
+        myVC.image = currentCell.tutorImage.image!
+        myVC.rating = currentCell.tutorRating.text
         
         navigationController?.pushViewController(myVC, animated: true)
         //performSegue(withIdentifier: "profileView", sender: nil)
