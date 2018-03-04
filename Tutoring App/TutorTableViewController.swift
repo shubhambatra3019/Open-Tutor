@@ -17,6 +17,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadTutors()
         
         // Do any additional setup after loading the view.
     }
@@ -39,7 +40,17 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         let tutor = tutors[indexPath.row]
         
+        
+        
+        cell.imageView?.layer.borderWidth = 1
+        cell.imageView?.layer.borderColor = UIColor.black.cgColor
+        
         cell.usernameLabel.text = tutor.name
+        cell.imageView?.image = tutor.photo
+        cell.tutorMajor.text = tutor.major
+        cell.tutorRating.text = String(tutor.rating)
+        
+        
         return cell
     }
     

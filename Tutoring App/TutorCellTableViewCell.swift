@@ -11,6 +11,9 @@ import UIKit
 class TutorInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var tutorImage: UIImageView!
+    @IBOutlet weak var tutorMajor: UILabel!
+    @IBOutlet weak var tutorRating: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
