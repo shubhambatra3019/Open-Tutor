@@ -20,6 +20,7 @@
 		7FDFB1A0204B5CEF007D9E91 /* TutorCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */; };
 		7FDFB1A2204B6325007D9E91 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A1204B6325007D9E91 /* Tutor.swift */; };
 		7FDFB1A4204B7DB2007D9E91 /* tutorImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */; };
+		7FDFB1A6204B8CC2007D9E91 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDFB1A5204B8CC1007D9E91 /* image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCellTableViewCell.swift; sourceTree = "<group>"; };
 		7FDFB1A1204B6325007D9E91 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
 		7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorImage.jpg; sourceTree = "<group>"; };
+		7FDFB1A5204B8CC1007D9E91 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,9 @@
 				7FDFB19B204B3176007D9E91 /* ClassPickerViewController.swift */,
 				7FDFB19D204B5677007D9E91 /* TutorTableViewController.swift */,
 				7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */,
-				7FDFB1A1204B6325007D9E91 /* Tutor.swift */,
 				7FDFB1A3204B7DB2007D9E91 /* tutorImage.jpg */,
+				7FDFB1A5204B8CC1007D9E91 /* image.png */,
+				7FDFB1A1204B6325007D9E91 /* Tutor.swift */,
 				7FDFB16E204B2DB7007D9E91 /* Main.storyboard */,
 				7FDFB174204B2DB7007D9E91 /* Assets.xcassets */,
 				7FDFB176204B2DB7007D9E91 /* LaunchScreen.storyboard */,
@@ -254,6 +257,7 @@
 				7FDFB175204B2DB7007D9E91 /* Assets.xcassets in Resources */,
 				7FDFB1A4204B7DB2007D9E91 /* tutorImage.jpg in Resources */,
 				7FDFB170204B2DB7007D9E91 /* Main.storyboard in Resources */,
+				7FDFB1A6204B8CC2007D9E91 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

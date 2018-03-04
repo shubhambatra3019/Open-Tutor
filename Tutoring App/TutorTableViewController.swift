@@ -41,12 +41,12 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let tutor = tutors[indexPath.row]
         
         
-        
-        cell.imageView?.layer.borderWidth = 1
-        cell.imageView?.layer.borderColor = UIColor.black.cgColor
-        
+        let image = UIImage(named: "image.png")
+        //cell.imageView?.layer.borderColor = UIColor.black.cgColor
+        // cell.imageView?.layer.cornerRadius = 30
         cell.usernameLabel.text = tutor.name
-        cell.imageView?.image = tutor.photo
+        cell.imageView?.image = image
+       
         cell.tutorMajor.text = tutor.major
         cell.tutorRating.text = String(tutor.rating)
         
@@ -55,7 +55,7 @@ class TutorTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        return 80.0
     }
     
    
