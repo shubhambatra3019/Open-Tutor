@@ -10,6 +10,7 @@
 		7F2A2431204C56AE00F39EB2 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A2430204C56AE00F39EB2 /* LoginPageViewController.swift */; };
 		7F2A2433204C62D700F39EB2 /* tutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2A2432204C62D700F39EB2 /* tutorIcon.png */; };
 		7F2A2435204C63BD00F39EB2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2A2434204C63BD00F39EB2 /* icon.png */; };
+		7F72F65D207EEEDB00B42863 /* ClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72F65C207EEEDB00B42863 /* ClassesCollectionViewCell.swift */; };
 		7FDFB16B204B2DB7007D9E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */; };
 		7FDFB16D204B2DB7007D9E91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFB16C204B2DB7007D9E91 /* ViewController.swift */; };
 		7FDFB170204B2DB7007D9E91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDFB16E204B2DB7007D9E91 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		7F2A2430204C56AE00F39EB2 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		7F2A2432204C62D700F39EB2 /* tutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorIcon.png; sourceTree = "<group>"; };
 		7F2A2434204C63BD00F39EB2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		7F72F65C207EEEDB00B42863 /* ClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FDFB167204B2DB7007D9E91 /* Tutoring App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tutoring App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDFB16A204B2DB7007D9E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FDFB16C204B2DB7007D9E91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		7FDFB1B6204BC5C4007D9E91 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7F72F65C207EEEDB00B42863 /* ClassesCollectionViewCell.swift */,
 				7FDFB19F204B5CEF007D9E91 /* TutorCellTableViewCell.swift */,
 				7FDFB1B3204BC032007D9E91 /* TutorRequestTableViewCell.swift */,
 				7FDFB1A1204B6325007D9E91 /* Tutor.swift */,
@@ -352,6 +355,7 @@
 				7FDFB16D204B2DB7007D9E91 /* ViewController.swift in Sources */,
 				7F2A2431204C56AE00F39EB2 /* LoginPageViewController.swift in Sources */,
 				7FDFB1BA204BC781007D9E91 /* StudentInfoViewController.swift in Sources */,
+				7F72F65D207EEEDB00B42863 /* ClassesCollectionViewCell.swift in Sources */,
 				7FDFB16B204B2DB7007D9E91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
