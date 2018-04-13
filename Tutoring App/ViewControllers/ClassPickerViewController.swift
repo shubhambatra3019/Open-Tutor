@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class ClassPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     @IBOutlet weak var classesCollectionView: UICollectionView!
@@ -28,6 +28,7 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         classes = ["MATH 131", "CMPSCI 121", "HIST 110", "ENG 112"]
         classesCollectionView.delegate = self
         classesCollectionView.dataSource = self
+        
         /*list = ["Mathematics", "Computer Science", "ECE", "Chem Engineering", "BioChem"]
      //   math = ["131", "132", "233", "235", "331"]
         dict["Mathematics"] = ["131", "132", "233", "235", "331"]
@@ -37,6 +38,19 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         dict["BioChem"] = ["220", "280", "360","520", "560"]
         keys = Array(dict.keys)*/
         // Do any additional setup after loading the view.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var screenSize = UIScreen.main.bounds.size
+        var cellWidth = screenSize.width/2 - 10
+        var cellHeight = cellWidth
+        var size = CGSize(width: cellWidth, height: cellHeight)
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let edgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        return edgeInsets
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,7 +68,7 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         
         return cell
     }
-    
+
     
 
     override func didReceiveMemoryWarning() {

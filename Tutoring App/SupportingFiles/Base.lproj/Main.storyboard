@@ -265,9 +265,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJ2-nP-SB2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJ2-nP-SB2">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-QR-4Kb">
                                                     <rect key="frame" x="17" y="51" width="117" height="48"/>
@@ -278,6 +277,12 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="RJ2-nP-SB2" firstAttribute="top" secondItem="cYF-8M-fpS" secondAttribute="top" id="8ah-vx-k1z"/>
+                                            <constraint firstAttribute="trailing" secondItem="RJ2-nP-SB2" secondAttribute="trailing" id="BZf-50-QqF"/>
+                                            <constraint firstAttribute="bottom" secondItem="RJ2-nP-SB2" secondAttribute="bottom" id="ZnY-Qy-9uj"/>
+                                            <constraint firstItem="RJ2-nP-SB2" firstAttribute="leading" secondItem="cYF-8M-fpS" secondAttribute="leading" id="vIu-Fr-639"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="classImage" destination="RJ2-nP-SB2" id="8AE-I1-SAF"/>
                                             <outlet property="classNameLabel" destination="UoE-QR-4Kb" id="zyj-5E-I8i"/>
