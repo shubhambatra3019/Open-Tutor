@@ -247,9 +247,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maF-DQ-S0v">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maF-DQ-S0v">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vwm-XC-PJG">
                                     <size key="itemSize" width="150" height="150"/>
@@ -265,26 +264,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJ2-nP-SB2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-QR-4Kb">
-                                                    <rect key="frame" x="17" y="51" width="117" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-QR-4Kb">
+                                                    <rect key="frame" x="51" y="64" width="48" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="RJ2-nP-SB2" firstAttribute="top" secondItem="cYF-8M-fpS" secondAttribute="top" id="8ah-vx-k1z"/>
-                                            <constraint firstAttribute="trailing" secondItem="RJ2-nP-SB2" secondAttribute="trailing" id="BZf-50-QqF"/>
-                                            <constraint firstAttribute="bottom" secondItem="RJ2-nP-SB2" secondAttribute="bottom" id="ZnY-Qy-9uj"/>
-                                            <constraint firstItem="RJ2-nP-SB2" firstAttribute="leading" secondItem="cYF-8M-fpS" secondAttribute="leading" id="vIu-Fr-639"/>
+                                            <constraint firstItem="UoE-QR-4Kb" firstAttribute="centerX" secondItem="cYF-8M-fpS" secondAttribute="centerX" id="CLA-Gb-Om5"/>
+                                            <constraint firstItem="UoE-QR-4Kb" firstAttribute="centerY" secondItem="cYF-8M-fpS" secondAttribute="centerY" id="XEx-qn-1Dq"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="classImage" destination="RJ2-nP-SB2" id="8AE-I1-SAF"/>
                                             <outlet property="classNameLabel" destination="UoE-QR-4Kb" id="zyj-5E-I8i"/>
                                         </connections>
                                     </collectionViewCell>
@@ -292,6 +284,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.9880952381" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="maF-DQ-S0v" firstAttribute="bottom" secondItem="O67-6f-bMb" secondAttribute="bottom" id="4ax-C4-NQZ"/>
+                            <constraint firstItem="maF-DQ-S0v" firstAttribute="trailing" secondItem="O67-6f-bMb" secondAttribute="trailing" id="KGJ-Sm-eb9"/>
+                            <constraint firstItem="maF-DQ-S0v" firstAttribute="top" secondItem="O67-6f-bMb" secondAttribute="top" id="gw9-nZ-FNB"/>
+                            <constraint firstItem="maF-DQ-S0v" firstAttribute="leading" secondItem="O67-6f-bMb" secondAttribute="leading" id="pAl-pm-f15"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O67-6f-bMb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Find Tutor" id="sDt-3M-FPe">

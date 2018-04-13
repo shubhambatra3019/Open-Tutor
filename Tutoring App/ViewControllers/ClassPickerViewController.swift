@@ -20,15 +20,20 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
     var dict: [String: [String]] = [:]
     var keys = Array<String>()
     var current: String = "Mathematics"*/
-    var classes: [String] = []
     
+    var classes: [String: UIColor] = [:]
+    var keys = Array<String>()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        classes = ["MATH 131", "CMPSCI 121", "HIST 110", "ENG 112"]
+       // classes = ["MATH 131", "CMPSCI 121", "HIST 110", "ENG 112"]
+        classes["Math 131"] = UIColor.magenta
+        classes["CMPSCI 121"] = UIColor.blue
+        classes["HIST 110"] = UIColor.brown
+        classes["ENG 112"] = UIColor.darkGray
         classesCollectionView.delegate = self
         classesCollectionView.dataSource = self
-        
+        keys = Array(classes.keys)
         /*list = ["Mathematics", "Computer Science", "ECE", "Chem Engineering", "BioChem"]
      //   math = ["131", "132", "233", "235", "331"]
         dict["Mathematics"] = ["131", "132", "233", "235", "331"]
@@ -41,10 +46,10 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var screenSize = UIScreen.main.bounds.size
-        var cellWidth = screenSize.width/2 - 10
-        var cellHeight = cellWidth
-        var size = CGSize(width: cellWidth, height: cellHeight)
+        let screenSize = self.classesCollectionView.frame.size
+        let cellWidth = screenSize.width/2 - 10
+        let cellHeight = cellWidth
+        let size = CGSize(width: cellWidth, height: cellHeight)
         return size
     }
     
@@ -52,6 +57,8 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         let edgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         return edgeInsets
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return classes.count
@@ -62,9 +69,10 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         else {
             fatalError("The cell is not n instance of MealTableViewCell.")
         }
-        let clas = classes[indexPath.row]
+        let clas = keys[indexPath.row]
         cell.classNameLabel.text = clas
-        cell.classImage.image = #imageLiteral(resourceName: "tutorImage.jpg")
+        cell.backgroundColor = classes[clas]
+        cell.classNameLabel.frame.size = CGSize(width: cell.frame.size.width - 10, height: cell.frame.size.height/2)
         
         return cell
     }

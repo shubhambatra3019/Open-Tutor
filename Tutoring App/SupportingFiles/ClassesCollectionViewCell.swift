@@ -11,5 +11,4 @@ import UIKit
 class ClassesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var classNameLabel: UILabel!
-    @IBOutlet weak var classImage: UIImageView!
 }
