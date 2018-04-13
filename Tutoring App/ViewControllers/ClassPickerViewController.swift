@@ -10,23 +10,11 @@ import UIKit
 
 class ClassPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    
     @IBOutlet weak var classesCollectionView: UICollectionView!
-    
-   // var currentMajor: String!
-    /*var list: [String] = []
-    var math: [String] = []
-    
-    var dict: [String: [String]] = [:]
-    var keys = Array<String>()
-    var current: String = "Mathematics"*/
-    
     var classes: [String: UIColor] = [:]
     var keys = Array<String>()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       // classes = ["MATH 131", "CMPSCI 121", "HIST 110", "ENG 112"]
         classes["Math 131"] = UIColor.magenta
         classes["CMPSCI 121"] = UIColor.blue
         classes["HIST 110"] = UIColor.brown
@@ -34,15 +22,6 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         classesCollectionView.delegate = self
         classesCollectionView.dataSource = self
         keys = Array(classes.keys)
-        /*list = ["Mathematics", "Computer Science", "ECE", "Chem Engineering", "BioChem"]
-     //   math = ["131", "132", "233", "235", "331"]
-        dict["Mathematics"] = ["131", "132", "233", "235", "331"]
-        dict["Computer Science"] = ["121", "187", "230", "250", "311", "383"]
-        dict["ECE"] = ["101", "130", "189", "267", "356", "440"]
-        dict["Chem Engineering"] = ["118", "190", "260", "310", "430"]
-        dict["BioChem"] = ["220", "280", "360","520", "560"]
-        keys = Array(dict.keys)*/
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -57,9 +36,7 @@ class ClassPickerViewController: UIViewController, UICollectionViewDataSource, U
         let edgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         return edgeInsets
     }
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return classes.count
     }
